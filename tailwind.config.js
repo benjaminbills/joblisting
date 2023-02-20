@@ -13,6 +13,9 @@ module.exports = {
       fontFamily: {
         league: 'League Spartan',
       },
+      screens: {
+        sm: '376px',
+      },
     },
   },
   plugins: [],
