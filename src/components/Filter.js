@@ -1,8 +1,8 @@
 const Filter = () => {
   return (
     <div className='p-4 flex content-center justify-center items-center font-bold text-sm'>
-      <div className='text-desaturateddarkcyan'>
-        <button className='bg-lightgrayishcyan rounded inline-flex content-center justify-center items-center h-[30px] pl-3 pt-3 pb-3 mr-3 mb-3 '>
+      <div className='text-desaturateddarkcyan flex flex-wrap justify-left items-center gap-4'>
+        <button className='bg-lightgrayishcyan rounded inline-flex content-center justify-center items-center h-[30px] pl-3 pt-3 pb-3'>
           Frontend
           <span className='bg-desaturateddarkcyan h-[30px] flex items-center content-center justify-center p-2 ml-2 rounded-r'>
             <svg xmlns='http://www.w3.org/2000/svg' width='14' height='14'>
@@ -14,7 +14,7 @@ const Filter = () => {
             </svg>
           </span>
         </button>
-        <button className='bg-lightgrayishcyan rounded inline-flex content-center justify-center items-center h-[30px] pl-3 pt-3 pb-3 mr-3 mb-3'>
+        <button className='bg-lightgrayishcyan rounded inline-flex content-center justify-center items-center h-[30px] pl-3 pt-3 pb-3 '>
           CSS
           <span className='bg-desaturateddarkcyan h-[30px] flex items-center content-center justify-center p-2 ml-2 rounded-r'>
             <svg xmlns='http://www.w3.org/2000/svg' width='14' height='14'>
@@ -26,7 +26,7 @@ const Filter = () => {
             </svg>
           </span>
         </button>
-        <button className='bg-lightgrayishcyan rounded inline-flex content-center justify-center items-center h-[30px] pl-3 pt-3 pb-3 mr-3 mb-3'>
+        <button className='bg-lightgrayishcyan rounded inline-flex content-center justify-center items-center h-[30px] pl-3 pt-3 pb-3 '>
           JavaScript
           <span className='bg-desaturateddarkcyan h-[30px] flex items-center content-center justify-center p-2 ml-2 rounded-r'>
             <svg xmlns='http://www.w3.org/2000/svg' width='14' height='14'>

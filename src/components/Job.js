@@ -1,63 +1,49 @@
-const Job = () => {
-  const joblist = {
-    id: 1,
-    company: 'Photosnap',
-    logo: './images/photosnap.svg',
-    new: true,
-    featured: true,
-    position: 'Senior Frontend Developer',
-    role: 'Frontend',
-    level: 'Senior',
-    postedAt: '1d ago',
-    contract: 'Full Time',
-    location: 'USA only',
-    languages: ['HTML', 'CSS', 'JavaScript'],
-    tools: [],
-  };
+const Job = ({ job }) => {
   return (
-    <div className='bg-white relative rounded border-l-4 border-desaturateddarkcyan '>
+    <div
+      className={`bg-white relative rounded ${
+        job.postedAt === '1d ago' ? 'border-l-4 border-desaturateddarkcyan' : ''
+      } `}
+    >
       <div className='pl-4'>
         <img
           className='w-12 h-12 absolute top-[-1.5rem] '
-          src={joblist.logo}
-          alt={joblist.company}
+          src={job.logo}
+          alt={job.company}
         />
       </div>
       <div className='pl-4 pr-4 pb-4 pt-[2em]  flex flex-col space-y-4'>
         <div className='flex'>
           <p className='text-desaturateddarkcyan font-bold pr-5'>
-            {joblist.company}
+            {job.company}
           </p>
-          <button className='rounded-xl bg-desaturateddarkcyan text-xs font-bold pl-2 pr-2 text-white'>
-            NEW!
-          </button>
-          <button className='ml-2 rounded-xl bg-verydarkgrayishcyan text-xs font-bold pl-2 pr-2 text-white'>
-            FEATURED
-          </button>
+          {job.postedAt === '1d ago' && (
+            <button className='rounded-xl bg-desaturateddarkcyan text-xs font-bold pl-2 pr-2 text-white max-h-[25px]'>
+              NEW!
+            </button>
+          )}
+          {job.featured && (
+            <button className='ml-2 rounded-xl bg-verydarkgrayishcyan text-xs font-bold pl-2 pr-2 text-white max-h-[25px]'>
+              FEATURED
+            </button>
+          )}
         </div>
-        <p className='text-verydarkgrayishcyan font-bold'>{joblist.position}</p>
-        <div className='flex flex-row space-x-2 text-darkgrayishcyan font-medium'>
-          <p>{joblist.postedAt}</p>
-          <p>{joblist.contract}</p>
-          <p>{joblist.location}</p>
-        </div>
+        <p className='text-verydarkgrayishcyan font-bold'>{job.position}</p>
+        <ul className='list-disc flex flex-row space-x-5 text-darkgrayishcyan font-medium'>
+          <li className='list-none'>{job.postedAt}</li>
+          <li>{job.contract}</li>
+          <li>{job.location}</li>
+        </ul>
         <hr></hr>
         <div className='flex flex-wrap justify-left items-center gap-4'>
-          <button className='p-2 bg-lightgrayishcyan text-desaturateddarkcyan font-bold rounded'>
-            Frontend
-          </button>
-          <button className='p-2 bg-lightgrayishcyan text-desaturateddarkcyan font-bold rounded'>
-            Senior
-          </button>
-          <button className='p-2 bg-lightgrayishcyan text-desaturateddarkcyan font-bold rounded'>
-            HTML
-          </button>
-          <button className='p-2 bg-lightgrayishcyan text-desaturateddarkcyan font-bold rounded'>
-            CSS
-          </button>
-          <button className='p-2 bg-lightgrayishcyan text-desaturateddarkcyan font-bold rounded'>
-            JavaScript
-          </button>
+          {job.languages.map((language, i) => (
+            <button
+              key={i}
+              className='p-2 bg-lightgrayishcyan text-desaturateddarkcyan font-bold rounded '
+            >
+              {language}
+            </button>
+          ))}
         </div>
       </div>
     </div>
