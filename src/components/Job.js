@@ -1,4 +1,4 @@
-const Job = ({ job }) => {
+const Job = ({ job, handleFilters }) => {
   return (
     <div
       className={`bg-white relative rounded ${
@@ -40,6 +40,7 @@ const Job = ({ job }) => {
             <button
               key={i}
               className='p-2 bg-lightgrayishcyan text-desaturateddarkcyan font-bold rounded '
+              onClick={() => handleFilters(language)}
             >
               {language}
             </button>

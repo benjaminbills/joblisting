@@ -1,4 +1,3 @@
-import Filter from '../components/Filter';
 import Jobs from '../components/Jobs';
 
 const JobPage = () => {
