@@ -42,15 +42,21 @@ const Job = () => {
           <p>{joblist.location}</p>
         </div>
         <hr></hr>
-        <div className=' flex flex-wrap '>
-          <button className='m-2 px-4 py-2 bg-lightgrayishcyan text-desaturateddarkcyan font-bold rounded'>
+        <div className='flex flex-wrap justify-left items-center gap-4'>
+          <button className='p-2 bg-lightgrayishcyan text-desaturateddarkcyan font-bold rounded'>
             Frontend
           </button>
-          <button className='m-2 px-4 py-2 bg-lightgrayishcyan text-desaturateddarkcyan font-bold rounded'>
-            Frontend
+          <button className='p-2 bg-lightgrayishcyan text-desaturateddarkcyan font-bold rounded'>
+            Senior
           </button>
-          <button className='m-2 px-4 py-2 bg-lightgrayishcyan text-desaturateddarkcyan font-bold rounded'>
-            Frontend
+          <button className='p-2 bg-lightgrayishcyan text-desaturateddarkcyan font-bold rounded'>
+            HTML
+          </button>
+          <button className='p-2 bg-lightgrayishcyan text-desaturateddarkcyan font-bold rounded'>
+            CSS
+          </button>
+          <button className='p-2 bg-lightgrayishcyan text-desaturateddarkcyan font-bold rounded'>
+            JavaScript
           </button>
         </div>
       </div>
