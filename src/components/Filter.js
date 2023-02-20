@@ -1,15 +1,15 @@
 const Filter = ({ print, handleFilters, filterItems, clearFilter }) => {
   return (
-    <div className='p-4 flex flex-row justify-between  font-bold text-sm'>
-      <div className='text-desaturateddarkcyan flex flex-wrap justify-left items-center gap-4 w-[260px]'>
+    <div className='p-4 flex flex-row justify-between  font-bold text-sm w-full'>
+      <div className='text-desaturateddarkcyan flex flex-wrap justify-left items-center gap-4 '>
         {filterItems.map((item, i) => (
           <button
             key={i}
             onClick={() => handleFilters(item)}
-            className='bg-lightgrayishcyan rounded inline-flex content-center justify-center items-center h-[30px] pl-3 pt-3 pb-3'
+            className='bg-lightgrayishcyan rounded inline-flex content-center justify-center items-center h-[30px] pl-3 pt-3 pb-3 '
           >
             {item}
-            <span className='bg-desaturateddarkcyan h-[30px] flex items-center content-center justify-center p-2 ml-2 rounded-r'>
+            <span className='bg-desaturateddarkcyan h-[30px] flex items-center content-center justify-center p-2 ml-2 rounded-r active:bg-verydarkgrayishcyan'>
               <svg xmlns='http://www.w3.org/2000/svg' width='14' height='14'>
                 <path
                   fill='#FFF'
@@ -22,7 +22,10 @@ const Filter = ({ print, handleFilters, filterItems, clearFilter }) => {
         ))}
       </div>
       {/* <div className='ml-auto pl-auto'> */}
-      <button className='text-darkgrayishcyan ml-auto' onClick={clearFilter}>
+      <button
+        className='text-darkgrayishcyan ml-auto active:text-desaturateddarkcyan active:underline active:underline-offset-4'
+        onClick={clearFilter}
+      >
         Clear
       </button>
 
