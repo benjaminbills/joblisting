@@ -34,7 +34,7 @@ const Jobs = () => {
           />
         </div>
       )}
-      <div className='ml-5 mr-5 pt-[50px]  pb-[30px]'>
+      <div className='lg:ml-32 lg:mr-32 sm:ml-10 sm:mr-10 ml-5 mr-5 pt-[5em]  pb-[30px]'>
         {(filteredJobs.length > 0 ? filteredJobs : AllJobs).map((job, i) => (
           <div className={i === 0 ? 'pt-0' : 'pt-[3em]'} key={job.id}>
             <Job handleFilters={handleFilters} job={job} />

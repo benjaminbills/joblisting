@@ -14,7 +14,7 @@ const Job = ({ job, handleFilters }) => {
       </div>
       <div className='pl-4 md:pl-[8em] pr-4 pb-4 pt-[2em] md:pt-6 md:pb-6  flex flex-col md:flex-row md:justify-between space-y-4 md:space-y-0'>
         <div className='flex flex-col space-y-[5px] justify-center content-center '>
-          <div className='flex'>
+          <div className='flex '>
             <p className='text-desaturateddarkcyan font-bold pr-5'>
               {job.company}
             </p>
